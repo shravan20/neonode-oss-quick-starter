@@ -1,9 +1,10 @@
-import { app, logger } from "./app.ts";
+import { logger } from "@helpers/logger";
+import { app } from "./app.ts";
 
 const port = 8080;
 
 const server = app.listen(port, () => {
-	console.log(`[server]: Server is running at http://localhost:${port}`);
+	logger.info(`[server]: Server is running at http://localhost:${port}`);
 });
 
 const onCloseSignal = () => {
