@@ -1,0 +1,33 @@
+npx detect-secrets scan
+
+if [ $? -ne 0 ]; then
+  echo "Secrets detected! Please remove them before committing."
+  exit 1
+fi
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+echo -e "${YELLOW}Running pre-commit checks...${NC}"
+
+# Prettifying using prettier
+npm run format:check && npm run format:write
+
+echo -e "${GREEN}Prettier validation complete
+$ npm run prod:build${NC}"
+
+
+# Linting using linter
+npm run lint:check && npm run lint:fix
+
+
+echo -e "${GREEN}Linter validation complete 
+$ npm run prod:build${NC}"
+
+echo -e "${GREEN}Pre-commit checks completed successfully.${NC}"
+
+# TODO: Include E2E tests and unit tests
+
+exit 0

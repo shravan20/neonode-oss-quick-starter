@@ -11,7 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "biome check src/",
     "lint:fix": "biome check src/ --fix",
-    "format": "biome format src/"
+    "format": "biome format src/",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
   "homepage": "https://github.com/shravan20/neonode-quick-starter#readme",
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
+    "husky": "^9.1.5",
     "nodemon": "^3.1.4"
   },
   "dependencies": {
