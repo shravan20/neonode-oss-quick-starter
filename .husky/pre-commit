@@ -12,15 +12,13 @@ NC='\033[0m'
 
 echo -e "${YELLOW}Running pre-commit checks...${NC}"
 
-# Prettifying using prettier
-npm run format:check && npm run format:write
+npm run format
 
 echo -e "${GREEN}Prettier validation complete
 $ npm run prod:build${NC}"
 
 
-# Linting using linter
-npm run lint:check && npm run lint:fix
+npm run lint && npm run lint:fix
 
 
 echo -e "${GREEN}Linter validation complete 
