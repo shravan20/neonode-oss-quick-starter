@@ -9,7 +9,7 @@ app.set("trust proxy", true);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/health-check", (request, response, next) => {
+app.get("/health-check", (_request, response, _next) => {
 	response.send({
 		heath: "up",
 	});

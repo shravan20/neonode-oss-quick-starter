@@ -10,7 +10,7 @@
       "correctness": {
         "noUnusedVariables": {
           "level": "warn",
-          "fix": "none"
+          "fix": "safe"
         }
       },
       "style": {
