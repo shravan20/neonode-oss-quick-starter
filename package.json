@@ -1,0 +1,36 @@
+{
+  "name": "neonode-quick-starter",
+  "type": "module",
+  "exports": {
+    "./biome": "./biome.json"
+  },
+  "version": "1.0.0",
+  "description": "Neonode Quick Starter RESTful Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "biome check src/",
+    "lint:fix": "biome check src/ --fix",
+    "format": "biome format src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shravan20/neonode-quick-starter.git"
+  },
+  "keywords": [
+    "neon",
+    "nodejs",
+    "postgresql",
+    "boilerplate"
+  ],
+  "author": "@shravan20",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shravan20/neonode-quick-starter/issues"
+  },
+  "homepage": "https://github.com/shravan20/neonode-quick-starter#readme",
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "nodemon": "^3.1.4"
+  }
+}
