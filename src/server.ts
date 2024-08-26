@@ -26,7 +26,7 @@ export class Server {
 			const handleServerClose = (err?: Error): void => {
 				if (err) {
 					logger.error("Error occurred while closing the server:", { error: err });
-					process.exit(1); // Exit with failure
+					process.exit(1);
 				} else {
 					logger.info("Server closed successfully.");
 					process.exit(0);
