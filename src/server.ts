@@ -1,35 +1,51 @@
 import { logger } from "@helpers/logger";
-import { app } from "./app.ts";
+import { App } from "./app";
 
-const port = 8080;
+export class Server {
+	private app: App;
+	private port: number | string;
+	private server: ReturnType<typeof App.prototype.app.listen>;
 
-const server = app.listen(port, () => {
-	logger.info(`[server]: Server is running at http://localhost:${port}`);
-});
+	constructor(port: number | string = process.env.PORT || 8080) {
+		this.port = port;
+		this.app = new App();
+	}
 
-const onCloseSignal = () => {
-	logger.info("Received termination signal. Initiating graceful shutdown...");
+	public start(): void {
+		this.server = this.app.app.listen(this.port, () => {
+			logger.info(`[server]: Server is running at http://localhost:${this.port}`);
+		});
 
-	const handleServerClose = (): ((err?: Error) => void) | undefined => {
-		return (err) => {
-			if (err) {
-				logger.error("Error occurred while closing the server:", err);
-				process.exit(1); // Exit with failure
-			} else {
-				logger.info("Server closed successfully.");
-				process.exit(0);
-			}
+		this.handleSignals();
+	}
+
+	private handleSignals(): void {
+		const onCloseSignal = () => {
+			logger.info("Received termination signal. Initiating graceful shutdown...");
+
+			const handleServerClose = (err?: Error): void => {
+				if (err) {
+					logger.error("Error occurred while closing the server:", { error: err });
+					process.exit(1);
+				} else {
+					logger.info("Server closed successfully.");
+					process.exit(0);
+				}
+			};
+			this.server.close(handleServerClose);
+
+			const forceShutdownTimeout = setTimeout(() => {
+				logger.error("Shutdown taking too long. Forcing exit.");
+				process.exit(1);
+			}, 10000);
+			forceShutdownTimeout.unref();
 		};
-	};
-	server.close(handleServerClose());
 
-	const forceShutdownTimeout = setTimeout(() => {
-		logger.error("Shutdown taking too long. Forcing exit.");
-		process.exit(1);
-	}, 10000);
-	forceShutdownTimeout.unref();
-};
+		["SIGINT", "SIGTERM"].map((signal) => {
+			process.on(signal, onCloseSignal);
+		});
+	}
+}
 
-["SIGINT", "SIGTERM"].map((signal) => {
-	process.on(signal, onCloseSignal);
-});
+const server = new Server();
+server.start();
