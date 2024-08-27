@@ -71,23 +71,24 @@ A production-ready, class-based Node.js/TypeScript starter project with Flexible
 
 #### Installation
 
-    Configuration: The application uses environment variables for configuration. Create a .env file at the root of the project and add the necessary variables from `.env.template` for successful execution in dev/production env.
+Configuration: The application uses environment variables for configuration. Create a .env file at the root of the project and add the necessary variables from `.env.template` for successful execution in dev/production env.
 
-    Steps to setup the code:
-        1. Clone the repository
+Steps to setup the code:
+
+  1. Clone the repository
 
         ```sh
         git clone https://github.com/shravan20/neonode-quick-starter.git
         cd neonode-quick-starter
         ```
 
-        2. Install dependencies
+  2. Install dependencies
 
         ```sh
         npm install
         ```
 
-        3. Running Locally
+  3. Running Locally
 
         ```sh
         npm run dev
@@ -95,7 +96,7 @@ A production-ready, class-based Node.js/TypeScript starter project with Flexible
 
         This will start the development server with hot-reloading.
 
-        4. Running in Production
+  4. Running in Production
 
         ```sh
         npm run build && npm start
