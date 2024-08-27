@@ -27,7 +27,10 @@ export class App {
 	private initializeErrorHandling(): void {
 		this.app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
 			logger.error("An error occurred", { error: err.message });
-			res.status(500).send("Internal Server Error");
+			res.status(500).json({
+				message: "Internal Server Error",
+				error: err.message,
+			});
 		});
 	}
 }
