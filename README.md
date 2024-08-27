@@ -63,15 +63,14 @@ A production-ready, class-based Node.js/TypeScript starter project with Flexible
 
 ### Getting Started
 
-    #### Prerequisites
+#### Prerequisites
 
     - Node.js (v16.x or higher)
     - npm or yarn
     - Docker (optional, for containerization)
 
+#### Installation
 
-    #### Installation
-    
     Configuration: The application uses environment variables for configuration. Create a .env file at the root of the project and add the necessary variables from `.env.template` for successful execution in dev/production env.
 
     Steps to setup the code:
