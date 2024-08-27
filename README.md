@@ -1,5 +1,5 @@
 <p align="center">
-  <img align="center" width="20%" src="assets/neonode.png" alt="logo"/>
+  <img align="center" width="20%" src="assets/logo.png" alt="logo"/>
   <h2 align="center">Neonode Quick Starter</h2>
 </p>
 
