@@ -1,4 +1,7 @@
-# Neonode Quick Starter
+<p align="center">
+  <img align="center" width="20%" src="assets/neonode.png" alt="logo"/>
+  <h2 align="center">Neonode Quick Starter</h2>
+</p>
 
 A production-ready, class-based Node.js/TypeScript starter project with Flexible Framework and PostgreSQL as DB, designed for modular and scalable applications.
 
