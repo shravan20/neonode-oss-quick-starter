@@ -24,10 +24,10 @@ A production-ready, class-based Node.js/TypeScript starter project with Flexible
 
 ### Features
 
-- [ ] **TypeScript**: Fully typed for stronger code reliability.
-- [ ] **Class-based Architecture**: Organized using classes for controllers, routers, and services.
-- [ ] **Middleware**: Pre-configured for JSON parsing, URL encoding, etc.
-- [ ] **Environment Config**: Use DotEnv for storing custom configurations in process.env.
+- [x] **TypeScript**: Fully typed for stronger code reliability.
+- [x] **Class-based Architecture**: Organized using classes for controllers, routers, and services.
+- [x] **Middleware**: Pre-configured for JSON parsing, URL encoding, etc.
+- [x] **Environment Config**: Use DotEnv for storing custom configurations in process.env.
 - [ ] **API Documentation**: Integrates with Swagger or similar tools for auto-generated docs.
 - [ ] **API Versioning**: Supports versioning for backward compatibility.
 - [ ] **Caching**: Implements caching with Valkey/KeyDB support.
