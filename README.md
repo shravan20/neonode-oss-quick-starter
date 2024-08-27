@@ -10,42 +10,42 @@ A production-ready, class-based Node.js/TypeScript starter project with Flexible
 
 ## Table of Contents
 
-- [x] [Features](#features)
-- [x] [Getting Started](#getting-started)
+- [x] [**Features**](#features)
+- [x] [**Getting Started**](#getting-started)
   - Prerequisites
   - Installation
     - Configuration (Environment Variables)
-- [x] [Project Structure](#project-structure)
-- [ ] Usage
-  - [ ]Health Check Endpoint
-  - [ ]Logging
-- [] Deployment
-- [Contributing](#contributing)
+- [x] [**Project Structure**](#project-structure)
+- [ ] [**Usage**]()
+  - Health Check Endpoint
+  - Logging
+- [ ] **Deployment**
+- [x] [**Contributing**](#contributing)
 
 ### Features
 
-- [ ] TypeScript: Fully typed, ensuring robust code.
-- [ ] Class-based Architecture: Clean separation of concerns using classes for controllers, routers, and services.
-- [ ] Middleware: Pre-configured for JSON parsing, URL encoding, and more.
-- [ ] Environment Configuration with DotEnv: Stores custom constant configurations within process.env using the DotEnv package.
-- [ ] API Documentation: Integrate Swagger or another API documentation tool to generate interactive API documentation automatically.
-- [ ] API Versioning: Implement API versioning to ensure backward compatibility for older API clients.
-- [ ] Caching: Implements caching for Node.js with support for Valkey/KeyDB.
-- [ ] Routing: Separates routes into Web Routes and API Routes for better organization.
-- [ ] Route Authentication Middleware: Secures Web routes with CSRF Tokens and API routes with JSON Web Tokens (JWT).
-- [ ] Unit & Integration Testing: Add comprehensive testing using frameworks like Jest or Mocha for better reliability.
-- [ ] Database Migration Tool: Include a database migration tool like knex or sequelize-cli to manage schema changes.
-- [ ] Health Check & Monitoring Tools: Easy Integration of tools like Prometheus or Datadog for monitoring application health and performance.
-- [ ] Background Queues: Implements background job processing.
-- [ ] Logging Interceptor: Adds a logging interceptor using Winston for better log management.
-- [ ] PostgreSQL Atomic Queries: Allows execution of atomic PostgreSQL queries on demand.
-- [ ] Configurable Connection Pools: Enables customizable connection pools for backend storage systems.
-- [ ] Rate Limiting: Implement a rate-limiting feature to protect against abuse by limiting the number of requests per user.
-- [ ] Global Handlers: Centralized response and error handling middleware.
-- [ ] Graceful Shutdown: Smooth server shutdown on termination signals.
-- [ ] Multi-language Support: Add support for internationalization (i18n) to make the application available in multiple languages.
-- [ ] Task Scheduler: Include a task scheduler for running scheduled background tasks (e.g., using node-cron).
-- [ ] Documentation:
+- [ ] **TypeScript**: Fully typed for stronger code reliability.
+- [ ] **Class-based Architecture**: Organized using classes for controllers, routers, and services.
+- [ ] **Middleware**: Pre-configured for JSON parsing, URL encoding, etc.
+- [ ] **Environment Config**: Use DotEnv for storing custom configurations in process.env.
+- [ ] **API Documentation**: Integrates with Swagger or similar tools for auto-generated docs.
+- [ ] **API Versioning**: Supports versioning for backward compatibility.
+- [ ] **Caching**: Implements caching with Valkey/KeyDB support.
+- [ ] **Routing**: Separates Web Routes and API Routes for better organization.
+- [ ] **Authentication Middleware**: Uses CSRF Tokens for Web routes, JWT for API routes.
+- [ ] **Testing**: Comprehensive unit and integration testing with Jest/Mocha.
+- [ ] **Database Migration**: Supports tools like Knex or Sequelize for schema management.
+- [ ] **Health Monitoring**: Easy integration with tools like Prometheus/Datadog.
+- [ ] **Background Queues**: Implements background job processing.
+- [ ] **Logging Interceptor**: Uses Winston for enhanced log management.
+- [ ] **PostgreSQL Queries**: Supports atomic PostgreSQL queries on demand.
+- [ ] **Connection Pools**: Customizable backend storage connection pools.
+- [ ] **Rate Limiting**: Limits requests per user to prevent abuse.
+- [ ] **Global Handlers**: Centralized response and error handling.
+- [ ] **Graceful Shutdown**: Ensures smooth server shutdown.
+- [ ] **Multi-language Support**: Adds i18n for multiple languages.
+- [ ] **Task Scheduler**: Supports scheduled tasks with node-cron.
+- [ ] **Documentation**:
   - [x] README.md
   - [x] License.md
   - [x] Code of Conduct.md
@@ -63,32 +63,32 @@ A production-ready, class-based Node.js/TypeScript starter project with Flexible
 
 ### Getting Started
 
-    #### Prerequisites
+#### Prerequisites
 
     - Node.js (v16.x or higher)
     - npm or yarn
     - Docker (optional, for containerization)
 
+#### Installation
 
-    #### Installation
-    
-    Configuration: The application uses environment variables for configuration. Create a .env file at the root of the project and add the necessary variables from `.env.template` for successful execution in dev/production env.
+Configuration: The application uses environment variables for configuration. Create a .env file at the root of the project and add the necessary variables from `.env.template` for successful execution in dev/production env.
 
-    Steps to setup the code:
-        1. Clone the repository
+Steps to setup the code:
+
+  1. Clone the repository
 
         ```sh
         git clone https://github.com/shravan20/neonode-quick-starter.git
         cd neonode-quick-starter
         ```
 
-        2. Install dependencies
+  2. Install dependencies
 
         ```sh
         npm install
         ```
 
-        3. Running Locally
+  3. Running Locally
 
         ```sh
         npm run dev
@@ -96,7 +96,7 @@ A production-ready, class-based Node.js/TypeScript starter project with Flexible
 
         This will start the development server with hot-reloading.
 
-        4. Running in Production
+  4. Running in Production
 
         ```sh
         npm run build && npm start
