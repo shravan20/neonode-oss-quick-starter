@@ -1,3 +1,4 @@
+import type { Request, Response } from "express";
 import morgan from "morgan";
 import winston, { format, transports } from "winston";
 
@@ -17,7 +18,7 @@ const logger = winston.createLogger({
 	],
 });
 
-const morganJsonFormat = (tokens, req, res) => {
+const morganJsonFormat = (tokens, req: Request, res: Response) => {
 	return JSON.stringify({
 		timestamp: new Date().toISOString(),
 		method: tokens.method(req, res),
@@ -29,7 +30,16 @@ const morganJsonFormat = (tokens, req, res) => {
 	});
 };
 
-const morganMiddleware = morgan(morganJsonFormat, {
+const morganStringFormat = (tokens, req: Request, res: Response) => {
+	return [
+		`${tokens.method(req, res)} ${tokens.url(req, res)}`,
+		`${tokens.status(req, res)} ${tokens["response-time"](req, res)} ms`,
+		`- ${tokens["remote-addr"](req, res)}`,
+		`User-Agent: ${tokens["user-agent"](req, res)}`,
+	].join(" | ");
+};
+
+const morganMiddleware = morgan(process.env.FORMAT_LOGS_JSON ? morganJsonFormat : morganStringFormat, {
 	stream: {
 		write: (message: string) => logger.info(message.trim()),
 	},
