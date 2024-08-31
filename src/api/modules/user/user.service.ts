@@ -1,5 +1,6 @@
 import type { User } from "@entities/User";
 import { UserRepository } from "./user.repository";
+
 export class UserService {
 	private userRepository: UserRepository;
 
