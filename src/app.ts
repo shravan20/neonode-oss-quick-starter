@@ -2,6 +2,7 @@ import { logger, morganMiddleware } from "@helpers/logger";
 import dotenv from "dotenv";
 import express, { type Express, Application, type Request, type Response, type NextFunction } from "express";
 import { HealthRouter } from "./api/modules/health-check/health-check.router";
+import { UserRouter } from "./api/modules/user/user.router";
 import { connectToDatabase } from "./db/connect";
 
 export class App {
@@ -26,7 +27,9 @@ export class App {
 
 	private initializeRoutes(): void {
 		const healthRouter = new HealthRouter();
+		const userRouter = new UserRouter();
 		this.app.use(healthRouter.router);
+		this.app.use(userRouter.router);
 	}
 
 	private initializeErrorHandling(): void {

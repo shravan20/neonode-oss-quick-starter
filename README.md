@@ -37,21 +37,21 @@ A production-ready, class-based Node.js/TypeScript starter project with Flexible
 - [ ] **Database Migration**: Supports tools like Knex or Sequelize for schema management.
 - [ ] **Health Monitoring**: Easy integration with tools like Prometheus/Datadog.
 - [ ] **Background Queues**: Implements background job processing.
-- [ ] **Logging Interceptor**: Uses Winston for enhanced log management.
+- [x] **Logging Interceptor**: Uses Winston for enhanced log management.
 - [ ] **PostgreSQL Queries**: Supports atomic PostgreSQL queries on demand.
 - [ ] **Connection Pools**: Customizable backend storage connection pools.
 - [ ] **Rate Limiting**: Limits requests per user to prevent abuse.
 - [ ] **Global Handlers**: Centralized response and error handling.
-- [ ] **Graceful Shutdown**: Ensures smooth server shutdown.
+- [x] **Graceful Shutdown**: Ensures smooth server shutdown.
 - [ ] **Multi-language Support**: Adds i18n for multiple languages.
 - [ ] **Task Scheduler**: Supports scheduled tasks with node-cron.
 - [ ] **Documentation**:
   - [x] README.md
   - [x] License.md
   - [x] Code of Conduct.md
-  - [ ] Contributing.md
+  - [x] Contributing.md
   - [ ] Architecture.md
-  - [ ] Security.md
+  - [x] Security.md
   - [ ] Deployment.md
   - [ ] Configuration.md
   - [ ] Roadmap.md

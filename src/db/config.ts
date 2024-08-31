@@ -1,4 +1,4 @@
-// import 'reflect-metadata';
+import "reflect-metadata";
 import dotenv from "dotenv";
 import { DataSource } from "typeorm";
 
