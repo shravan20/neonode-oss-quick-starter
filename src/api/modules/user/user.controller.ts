@@ -8,12 +8,12 @@ export class UserController {
 		this.userService = new UserService();
 	}
 
-	public createUser = (req: Request, res: Response): void => {
-		const userStatus = this.userService.create(req.body);
-		res.status(200).json(userStatus);
+	public createUser = async (req: Request, res: Response): Promise<void> => {
+		const user = await this.userService.create(req.body);
+		res.status(200).json(user);
 	};
 
-	public getUsers = (_req: Request, res: Response): void => {
-		res.status(200).json({});
+	public getUsers = async (_req: Request, res: Response): Promise<void> => {
+		res.status(200).json(await this.userService.getAllUsers());
 	};
 }

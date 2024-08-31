@@ -33,7 +33,7 @@
       "@src/*": ["src/*"],
       "@helpers/*": ["src/helpers/*"],
       "@modules/*": ["src/api/modules/*"],
-      "@entities/*": ["src/api/entities/*"]
+      "@entities/*": ["src/db/entities/*"]
     } /* Specify a set of entries that re-map imports to additional lookup locations. */,
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
