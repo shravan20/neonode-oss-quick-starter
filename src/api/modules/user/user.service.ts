@@ -1,4 +1,4 @@
-import type { User } from "@entities/User";
+import type { User } from "@src/db/entities/user.entity";
 import { UserRepository } from "./user.repository";
 
 export class UserService {
