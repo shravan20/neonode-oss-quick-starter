@@ -1,11 +1,9 @@
 // import "reflect-metadata";
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity } from "./base.entity";
 
 @Entity()
-export class User {
-	@PrimaryGeneratedColumn("uuid")
-	id: number;
-
+export class User extends BaseEntity {
 	@Column("text")
 	name: string;
 
